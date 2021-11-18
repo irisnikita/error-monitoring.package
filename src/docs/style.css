@@ -1,0 +1,14 @@
+input {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px;
+}
+
+select {
+  padding: 5px 10px;
+}
+
+button {
+  margin-top: 5px;
+  padding: 5px 10px;
+}
