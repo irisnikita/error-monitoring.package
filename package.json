@@ -1,6 +1,6 @@
 {
   "name": "@error-monitoring/package",
-  "version": "1.0.20",
+  "version": "1.0.22",
   "description": "",
   "main": "build/index.js",
   "typings": "build/components/index.d.ts",
@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "@cypress/commit-info": "^2.2.0",
+    "@error-monitoring/package": "1.0.22",
     "axios": "^0.21.1",
     "fs": "0.0.1-security",
     "moment": "^2.29.1",

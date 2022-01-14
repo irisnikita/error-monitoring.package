@@ -2,12 +2,12 @@
 import React, { useEffect, useState } from "react";
 
 // Components
-import Error from "components";
+import ErrorMonitoring from "@error-monitoring/package";
 
 const PATH = "src/docs/App.tsx";
 
-const error = new Error({
-  projectId: "d284062f-33f0-40cb-539b-178c01fe318c",
+const error = new ErrorMonitoring({
+  projectId: "4accdae1-47e1-45bb-6627-ff846844b53d",
   env: "development",
 });
 
@@ -17,9 +17,9 @@ const App: React.FC = () => {
   const [value, setValue] = useState("asd");
   const [assignee, setAssignee] = useState("huongamt");
   const [form, setForm] = useState({
-    projectId: "d284062f-33f0-40cb-539b-178c01fe318c",
+    projectId: "4accdae1-47e1-45bb-6627-ff846844b53d",
     env: "development",
-    error: "assd",
+    error: "Error 1",
     assignee: "",
     priority: "",
   });
@@ -30,10 +30,10 @@ const App: React.FC = () => {
 
   const onClick = (a: any) => {
     try {
-      JSON.parse('[1, 2, 3, 4,]');
+      throw new Error(form.error)
     } catch (error) {
       console.log(error, 'error')
-      Error.handleError(error, {
+      ErrorMonitoring.handleError(error, {
         path: PATH,
         args: [1, 2, 3],
         functionName: "onClick",

@@ -3,7 +3,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
 
 module.exports = {
-  devtool: "source-map",
+  devtool: 'eval-source-map',
   entry: "./src/docs/index.tsx",
   output: {
     path: path.join(__dirname, "build"),
@@ -19,7 +19,7 @@ module.exports = {
       api: path.resolve(__dirname, "src/api/"),
     },
   },
-  devServer: { contentBase: path.join(__dirname, "docs") },
+  devServer: { contentBase: path.join(__dirname, "docs"), port: 9000 },
   module: {
     rules: [
       {
